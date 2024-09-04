@@ -1,0 +1,859 @@
+/* Imports de fonts */
+@font-face {
+   font-family: Inter;
+   src: url(../assets/fonts/inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+   font-family: TitilliumWeb-Black;
+   src: url(../assets/fonts/titilliun-web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+   font-family: TitilliumWeb-Bold;
+   src: url(../assets/fonts/titilliun-web/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+   font-family: quicksand;
+   src: url(../assets/fonts/quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+   font-family: TitilliumWeb-Regular;
+   src: url(../assets/fonts/titilliun-web/TitilliumWeb-Regular.ttf);
+}
+
+/* Reset CSS */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Classes Genéricas */
+.layout-grid {
+   width: 90%;
+   height: 100%;
+   margin: 0 auto;
+   /* border: 1px solid salmon; */
+}
+
+.mostrar-menu {
+   left: 0 !important;
+}
+
+.mostrar-usuarios {
+   right: 0 !important;
+}
+
+/* justify content + align items */
+.alinhamento-between-center {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+body {
+   color: white;
+}
+
+/* Mobile First */
+
+/* HEADER */
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 60px;
+   z-index: 100;
+   background-color: #1B1426;
+}
+
+header .header-top {
+   display: none;
+}
+
+header .header-bottom {
+   height: 60px;
+}
+
+header .logo {
+   width: 86px;
+}
+
+
+header .header-bottom nav {
+   position: fixed;
+   top: 60px;
+   left: -80vw;
+   z-index: 101;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: space-between; */
+   width: 80vw;
+   height: calc(100vh - 60px);
+   padding-bottom: 20px;
+   background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+   backdrop-filter: blur(45px);
+
+   transition: left 0.4s;
+}
+
+
+header .header-bottom nav>a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   padding: 30px 0;
+   color: white;
+   font-size: 15px;
+   font-family: Inter;
+   text-decoration: none;
+   border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav a:last-of-type {
+   border-bottom: none;
+}
+
+header .header-bottom nav .midias-sociais {
+   position: absolute;
+   bottom: 20px;
+   left: 0;
+   width: 100%;
+
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
+   gap: 20px;
+}
+
+header .menu-usuarios {
+   position: fixed;
+   top: 60px;
+   right: -20vw;
+   width: 20vw;
+   height: 170px;
+
+   background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+   backdrop-filter: blur(45px);
+
+   transition: right 0.4s;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+
+/* main */
+
+main {
+   margin-top: 60px;
+   background-image: url(../assets/images/Banner_cadastro_de_Equipe.png);
+   background-size: contain;
+   background-position: center;
+   height: 1231px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+main .cadastro-de-equipes {
+   background: linear-gradient(112.07deg, rgba(27, 20, 38, 0.6) 0%, rgba(60, 3, 65, 0.38) 98.83%);
+   backdrop-filter: blur(5px);
+   height: 492px;
+   width: 335px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 70px;
+   border-radius: 8px;
+
+}
+
+main .cadastro-de-equipes .titulo {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+main .cadastro-de-equipes .titulo h1 {
+   font-family: TitilliumWeb-Black;
+   font-size: 28px;
+   text-align: center;
+}
+
+main .cadastro-de-equipes .titulo hr {
+   border: 3px solid #F9AA01;
+   width: 250px;
+}
+
+
+main .cadastro-de-equipes form .caixinhas {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+main .cadastro-de-equipes form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+main .cadastro-de-equipes .caixinhas .iddeequipe {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   margin-left: 15px;
+   width: 273px;
+   height: 40px;
+   background: linear-gradient(91.13deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.1) 100%);
+   outline: none;
+   border-radius: 8px;
+   backdrop-filter: blur(4px);
+   padding: 5px 10px;
+}
+
+main .cadastro-de-equipes .caixinhas .iddeequipe input {
+   background-color: transparent;
+   outline: none;
+   border: none;
+}
+
+.iddeequipe>input::placeholder {
+   font-family: TitilliumWeb-Regular;
+   color: white;
+   font-size: 16px;
+}
+
+main .cadastro-de-equipes .caixinhas .nomedaequipe {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   margin-left: 15px;
+   width: 273px;
+   height: 40px;
+   background: linear-gradient(91.13deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.1) 100%);
+   outline: none;
+   border-radius: 8px;
+   backdrop-filter: blur(4px);
+   padding: 5px 10px;
+}
+
+main .cadastro-de-equipes .caixinhas .nomedaequipe input {
+   background-color: transparent;
+   outline: none;
+   border: none;
+   width: 193px;
+}
+
+.nomedaequipe>input::placeholder {
+   font-size: 16px;
+   font-family: TitilliumWeb-Regular;
+   color: white;
+}
+
+main .cadastro-de-equipes .caixinhas .imagemdaequipe {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+
+
+}
+
+main .cadastro-de-equipes .caixinhas .imagemdaequipe p {
+   font-family: TitilliumWeb-Regular;
+   font-size: 10px;
+}
+
+main .cadastro-de-equipes .caixinhas .imagemdaequipe button {
+   width: 124px;
+   height: 40px;
+   background-color: #D9D9D9;
+   color: black;
+   border: none;
+   border-radius: 8px;
+}
+
+main .cadastro-de-equipes .caixinhas .botaocadastro {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+main .cadastro-de-equipes .botaocadastro button {
+   width: 268px;
+   height: 40px;
+   background-color: #F9AA01;
+   color: black;
+   border: none;
+   border-radius: 8px;
+   font-size: 24px;
+   font-family: TitilliumWeb-Bold;
+}
+
+/* tabela */
+
+main .tabela {
+   width: 337px;
+   height: 396px;
+}
+
+main table {
+   width: 100%;
+   position: relative;
+   z-index: 2;
+
+}
+
+
+main thead,
+main tbody {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 100%;
+}
+
+
+main thead tr {
+   margin-bottom: 30px;
+   border-bottom: 3px solid #F9AA01;
+}
+
+
+main table thead th {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 20%;
+   height: 50px;
+   color: #F9AA01;
+   font-family: TitilliumWeb-Black;
+   font-size: 20px;
+   text-transform: uppercase;
+
+}
+
+
+
+main table tr {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+main table tbody tr {
+   height: 70px;
+   margin-bottom: 20px;
+   /* efeito da borda e do fundo glass */
+   border: 2px solid transparent;
+   border-radius: 8px;
+   background:
+      /* fundo */
+      linear-gradient(to right bottom, rgba(27, 20, 38, .6), rgba(60, 3, 65, .38)) padding-box,
+      /* fundo borda */
+      linear-gradient(90deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .1)) border-box;
+   backdrop-filter: blur(4px);
+
+
+}
+
+main table td {
+   width: 100%;
+   height: 38px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-right: 2px solid #F9AA01;
+   font-family: TitilliumWeb-Bold;
+   text-transform: uppercase;
+}
+
+main table td:last-of-type {
+   border: none;
+}
+
+main table td img.green-play {
+   width: 25px;
+}
+
+main table td img.lixin {
+   width: 15px;
+}
+
+footer {
+   height: 1531px;
+   background-image: url(../assets/images/backgroung_footer.png);
+   background-size: contain;
+   background-position: center;
+   box-shadow: inset 0 100px 50px black;
+}
+
+footer .soparadaroespaçamento {
+   margin-bottom: 32px;
+}
+
+footer .titulosfooter {
+   font-family: TitilliumWeb-Black;
+   font-size: 30px;
+}
+
+
+
+footer .footerzin .osbaguioai .logo {
+   margin-top: 69px;
+   width: 110px;
+   height: 32px;
+}
+
+footer .footerzin .osbaguioai {
+   height: 1531px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+
+footer .footerzin .osbaguioai .motivação {
+   font-family: quicksand;
+   font-size: 14px;
+   text-align: justify;
+}
+
+footer .footerzin .osbaguioai .linksredessociais {
+   width: 335px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+footer .footerzin .linksuteis {
+   width: 320px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+
+
+footer .footerzin hr {
+   border: 3px solid #F9AA01;
+   width: 112.96px;
+}
+
+footer .footerzin .linksuteis .linksdoslinksuteis a {
+   font-family: TitilliumWeb-Bold;
+   font-size: 16px;
+   text-decoration: none;
+   color: white;
+}
+
+footer .footerzin .linksuteis .linksdoslinksuteis hr {
+   border: 2px solid #F9AA01;
+   width: 14.4px;
+   height: 0;
+}
+
+footer .footerzin .linksuteis .linksdoslinksuteis {
+   width: 320px;
+   display: flex;
+   height: 61px;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: flex-start;
+   margin-top: 20px;
+
+}
+
+footer .footerzin .linksuteis .linksdoslinksuteis .links1 {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 10px;
+}
+
+
+footer .footerzin .linksuteis .linksdoslinksuteis .links2 {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+footer .footerzin .linksuteis .linksdoslinksuteis .links1 .abc {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   gap: 10px;
+}
+
+footer .footerzin .linksuteis .linksdoslinksuteis .links2 .abc {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   gap: 10px;
+}
+
+footer .footerzin .contatosfooter {
+   width: 333px;
+   height: 157px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+
+footer .footerzin .contatosfooter .topicoscontatos h3 {
+   font-size: 16px;
+   color: #F9AA01;
+   font-family: TitilliumWeb-Bold;
+}
+
+footer .footerzin .contatosfooter .topicoscontatos a {
+   font-size: 16px;
+
+   color: white;
+   font-family: TitilliumWeb-Bold;
+   text-decoration: none;
+}
+
+footer .footerzin .contatosfooter .topicoscontatos p {
+   font-size: 16px;
+
+   color: white;
+   font-family: TitilliumWeb-Bold;
+}
+
+footer .footerzin .newslatter .skrr input {
+   height: 40px;
+   width: 333px;
+   background: linear-gradient(91.13deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.1) 100%);
+   backdrop-filter: blur(3px);
+}
+
+footer .footerzin .newslatter .skrr .skri {
+   display: flex;
+   flex-direction: column;
+   height: 95px;
+   gap: 10px;
+}
+
+.skrr .dopdop>input::placeholder {
+
+   color: white;
+
+}
+
+.skrr input {
+   border-radius: 8px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.skrr button {
+   width: 333px;
+   height: 40px;
+   border-radius: 8px;
+   background-color: #F9AA01;
+   border: none;
+   font-family: TitilliumWeb-Bold;
+   font-size: 24px;
+}
+
+.skrr input {
+   padding-left: 20px;
+}
+
+footer .footerzin .botaovoltaraotopo {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   width: 333px;
+   margin-top: 33px;
+   margin-bottom: 24px;
+}
+
+footer .footerzin .copyright {
+   width: 333px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+footer .footerzin .copyright p {
+   font-size: 16px;
+   font-family: TitilliumWeb-Regular;
+}
+
+/* Desktop >= 1200px*/
+@media screen and (min-width: 1200px) {
+   .layout-grid {
+      width: 100%;
+      max-width: 1200px;
+   }
+
+   /* header */
+   header {
+      position: static;
+      height: 140px;
+      width: 100%;
+   }
+
+   header .header-top {
+      height: 50px;
+      display: block;
+      border-bottom: 2px solid #F9AA01;
+   }
+
+   header .header-top .contatos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 450px;
+      font-family: inter;
+      font-size: 14px;
+      font-weight: 400;
+      /* border: 2px solid #FD4255; */
+   }
+
+   /* divs .phone, .mail */
+   header .header-top .contatos>div {
+      display: flex;
+      gap: 10px;
+      width: 200px;
+      /* border-bottom: 2px solid #F9AA01; */
+   }
+
+
+   header .header-top .midias-sociais {
+      width: 140px;
+      display: flex;
+      justify-content: space-between;
+      /* border: 2px solid #FD4255; */
+   }
+
+   /* esconde os elementos desnecessários */
+   header .header-bottom .menu-hamburger,
+   header .header-bottom .menu-pontinhos,
+   header .header-bottom nav .phone,
+   header .header-bottom nav .mail,
+   header .header-bottom nav .midias-sociais {
+      display: none;
+   }
+
+
+
+   header .header-bottom {
+      height: 90px;
+   }
+
+   header .logo {
+      width: 200px;
+   }
+
+
+
+   header .header-bottom nav {
+      position: static;
+      width: 440px;
+      height: 50px;
+      padding-bottom: 0;
+      flex-direction: row;
+      align-items: center;
+      /* background-color: red; */
+      justify-content: space-between;
+   }
+
+   header .header-bottom nav>a {
+      font-size: 14px;
+      padding: 0;
+      border: none;
+   }
+
+   header .header-bottom .menu-usuarios {
+      position: static;
+      width: 140px;
+      flex-direction: row;
+      justify-content: space-between;
+      height: auto;
+      background-color: transparent;
+      background-image: none;
+   }
+
+   /* main */
+
+   main {
+      margin-top: 0;
+      background-image: url(../assets/images/asjofvszodvbfows.png);
+
+      background-size: contain;
+      background-position: center;
+      padding: 0 10px;
+   }
+
+   main .tabela {
+      width: 790px;
+      height: 496px;
+
+   }
+
+   main table td {
+      font-size: 24px;
+   }
+
+   main .cadastro-de-equipes {
+      width: 800px;
+      height: 530px;
+   }
+
+   main .cadastro-de-equipes .titulo h1 {
+      font-size: 40px;
+   }
+
+   main .cadastro-de-equipes .titulo hr {
+      width: 390px;
+   }
+
+   main .cadastro-de-equipes .caixinhas .iddeequipe {
+      width: 565px;
+   }
+   main .cadastro-de-equipes .caixinhas .nomedaequipe {
+      width: 565px;
+   }
+
+   main .cadastro-de-equipes .caixinhas .imagemdaequipe button {
+      width: 334px;
+   }
+   main .cadastro-de-equipes .caixinhas .imagemdaequipe p {
+      font-size: 16px;
+   }
+
+   /* footer */
+
+   footer {
+      background-image: url(../assets/images/bkgfooterdesktop.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: inset 0 100px 50px black;
+      height: 520px;
+      margin-top: -21px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   footer .footerzin .osbaguioai {
+      padding-top: 87px;
+      height: 373px;
+      width: 1265px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      /* background-color: salmon; */
+   }
+
+   footer .footerzin .osbaguioai .paraodesktopficartop {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 285px;
+      height: 258px;
+   }
+
+   footer .footerzin .osbaguioai .logo {
+      width: 196px;
+      height: 56.11px;
+      margin-top: 0;
+   }
+
+   footer .footerzin .osbaguioai .motivação p {
+      width: 285px;
+      height: 87.17px;
+   }
+
+   footer .footerzin .osbaguioai .linksredessociais {
+      width: 206px;
+   }
+
+   footer .footerzin .osbaguioai .linksuteis {
+      height: 258px;
+      width: 148px;
+      margin-left: 53px;
+      margin-top: -45px;
+   }
+
+   footer .footerzin .osbaguioai .paraodesktopficartop .linksdoslinksuteis {
+      height: 148px;
+      width: 97px;
+   }
+
+   footer .footerzin .osbaguioai .linksuteis .linksdoslinksuteis .links1 {
+      width: 148px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+   }
+
+   footer .footerzin .osbaguioai .linksuteis .linksdoslinksuteis .links2 {
+      width: 148px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+   }
+
+   footer .footerzin .osbaguioai .contatosfooter .Localização {
+      width: 287px;
+
+   }
+
+   footer .footerzin .osbaguioai .contatosfooter {
+      width: 287px;
+      height: 249px;
+      padding-right: 10px;
+   }
+
+   footer .footerzin .osbaguioai .contatosfooter .topicoscontatos a {
+      width: 285px;
+   }
+
+   footer .footerzin .osbaguioai .copyright {
+      padding-top: 87px;
+      width: 100%;
+   }
+
+   footer .footerzin .osbaguioai .newslatter .botaovoltaraotopo {
+      top: 115px;
+      position: relative;
+      left: -36px;
+   }
+
+   footer .footerzin .osbaguioai .newslatter {
+      margin-right: 49px;
+   }
+
+
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de times</title>
+    <link rel="stylesheet" href="./css/timesstyle.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="layout-grid alinhamento-between-center">
+
+                <div class="contatos">
+                    <div class="phone">
+                        <img src="assets/icons/telefone.svg" alt="Ícone do telefone de contato">
+                        <p>(11) 0900-1010</p>
+                    </div>
+                    <div class="mail">
+                        <img src="assets/icons/icone email.svg" alt="Ícone de email de contato">
+                        <p>contato@gamer.com.br</p>
+                    </div>
+                </div>
+
+                <div class="midias-sociais">
+                    <a href="">
+                        <img src="assets/icons/icone facebook.svg" alt="Imagem link do facebook da empresa">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/linkedin.svg" alt="Imagem link do Linkedin da empresa">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/insta.svg" alt="Imagem link do instagram da empresa">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="layout-grid alinhamento-between-center">
+                <!-- Menu Hamburger. Visível apenas no smartphone -->
+                <img class="menu-hamburger" onclick="mostrarMenu()" src="assets/icons/menu de hamburguer.svg"
+                    alt="Ícone de Telefone. Abre e fecha o menu principal, no celular">
+
+                <img class="logo" src="assets/icons/logo.svg"
+                    alt="Imagem logotipo gamer com um controle de vídeo game ao centro">
+
+                <nav class="menu" id="menu">
+                    <a href="./index.html">Início</a>
+                    <a href="./jogadores.html">Jogadores</a>
+                    <a href="./times.html">Equipes</a>
+                    <a href="./index.html.noticias">Notícias</a>
+
+                    <!-- vísível apenas no mobile -->
+                    <a class="phone">
+                        <img src="assets/icons/telefone.svg" alt="Ícone do telefone de contato">
+                        <p>(11) 0900-1010</p>
+                    </a>
+                    <a class="mail">
+                        <img src="assets/icons/icone email.svg" alt="Ícone de email de contato">
+                        <p>contato@gamer.com.br</p>
+                    </a>
+
+
+                    <div class="midias-sociais">
+                        <a href="">
+                            <img src="assets/icons/icone facebook.svg" alt="Imagem link do facebook da empresa">
+                        </a>
+                        <a href="">
+                            <img src="assets/icons/linkedin.svg" alt="Imagem link do Linkedin da empresa">
+                        </a>
+                        <a href="">
+                            <img src="assets/icons/insta.svg" alt="Imagem link do instagram da empresa">
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- menu 3 pontinhos -->
+                <img class="menu-pontinhos" onclick="mostrarUsuarios()" src="assets/icons/menu bolinha.svg"
+                    alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
+
+                <div id="menu-usuarios" class="menu-usuarios">
+                    <a href="">
+                        <img src="assets/icons/perfil icone.svg" alt="Ícone de perfil">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/shopingbag.svg" alt="Ícone de sacola">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/lupa de pesquisa.svg" alt="Ícone lupa de pesquisa">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="layout-grid cadastro-de-equipes">
+            <div class="titulo">
+                <h1>Cadastro de Equipes</h1>
+                <hr>
+            </div>
+            <form action="">
+                <div>
+                    <div class="caixinhas">
+                        <div class="iddeequipe">
+                            <input type="text" placeholder="Digite o id da sua equipe:">
+                        </div>
+                        <div class="nomedaequipe">
+                            <input type="text" placeholder="Digite o nome da sua equipe:">
+                        </div>
+                        <div class="imagemdaequipe">
+                            <button>Imagem da Equipe</button>
+                            <p>Nenhuma imagem selecionada...</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+            <div class="botaocadastro">
+                <button>Cadastro</button>
+            </div>
+        </section>
+        <section class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Foto</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Loud</td>
+                        <td><img class="loud" src="./assets/icons/loud.svg" alt=""></td>
+                        <td><img class="lixin" src="./assets/icons/lixin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Loud</td>
+                        <td><img class="loud" src="./assets/icons/loud.svg" alt=""></td>
+                        <td><img class="lixin" src="./assets/icons/lixin.svg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Loud</td>
+                        <td><img class="loud" src="./assets/icons/loud.svg" alt=""></td>
+                        <td><img class="lixin" src="./assets/icons/lixin.svg" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <section class="layout-grid footerzin">
+            <div class="osbaguioai">
+                <div class=".paraodesktopficartop">
+                    <div>
+                        <img class="logo" src="./assets/icons/logo.svg" alt="">
+                    </div>
+
+                    <div class="motivação">
+                        <P>Nosso sucesso na criação de soluções de negócios se deve em grande parte à nossa equipe
+                            talentosa
+                            e altamente comprometida.</P>
+                    </div>
+
+                    <div class="linksredessociais">
+                        <div>
+                            <a href=""><img src="./assets/icons/icone_facebook_footer.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="./assets/icons/icone_linkedin_footer.svg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="./assets/icons/icone_intagram_footer.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="linksuteis">
+                    <div class="titulolinksuteis soparadaroespaçamento">
+                        <h2 class="titulosfooter">Links Úteis</h2>
+                        <hr>
+                    </div>
+
+                    <div class="linksdoslinksuteis">
+                        <div class="links1">
+                            <div class="abc">
+                                <hr>
+                                <a href="./index.html">Início</a>
+                            </div>
+                            <div class="abc">
+                                <hr>
+                                <a href="./jogadores.html">Jogadores</a>
+                            </div>
+                            <div class="abc">
+                                <hr>
+                                <a href="">Notícias</a>
+                            </div>
+                        </div>
+                        <div class="links2">
+
+                            <div class="abc">
+                                <hr>
+                                <a href="./login.html">Login</a>
+                            </div>
+                            <div class="abc">
+                                <hr>
+                                <a href="./times.html">Equipes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contatosfooter">
+                    <div class="titulocontatos soparadaroespaçamento">
+                        <h2 class="titulosfooter">Contatos</h2>
+                        <hr>
+                    </div>
+
+                    <div class="topicoscontatos">
+                        <div class="Localização">
+                            <h3>Localização</h3>
+                            <a
+                                href="https://www.google.com.br/maps/place/R.+Niterói,+180+-+Centro,+São+Caetano+do+Sul+-+SP,+09510-200/@-23.6151292,-46.5733046,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce5cec439b9ce3:0x92940269447ce633!8m2!3d-23.6151292!4d-46.5707243!16s%2Fg%2F11csnpwgvx">Rua
+                                Niterói, 180 - São Caetano do Sul - SP</a>
+                        </div>
+                        <div>
+                            <h3>Junte-se a nós:</h3>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">contato@gamer.com.br</a>
+                        </div>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(11) 0900-1010</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="newslatter">
+                    <div class="soparadaroespaçamento">
+                        <h2 class="titulosfooter">Newslatter</h2>
+                        <hr>
+                    </div>
+
+                    <form class="skrr">
+                        <div class="skri">
+                            <div class="dopdop">
+                                <input class="formulario" type="email" placeholder="Digite seu e-mail:">
+                            </div>
+                            <div class="yesyesyes">
+                                <button>Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="botaovoltaraotopo">
+                        <a href=""><img src="./assets/icons/Botao_voltar_ao_topo.svg" alt=""></a>
+                    </div>
+
+
+                </div>
+
+                <div class="copyright">
+                    <p>©Copyright2022-GamerJogosDigitais</p>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        
+    </footer>
+    
+    <script>
+
+            function mostrarMenu() {
+                // pega a navbar pelo id
+                document.getElementById("menu").classList.toggle("mostrar-menu");
+            }
+    
+            function mostrarUsuarios() {
+                document.getElementById("menu-usuarios").classList.toggle("mostrar-usuarios");
+            }
+    
+        </script>
+
+
+
+</body>
+
+</html>
